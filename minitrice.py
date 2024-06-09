@@ -8,3 +8,7 @@ def main():
 def calculator(input_str):
 
     #Fonction qui effectue les calculs
+    return
+
+if __name__ == "__main__":
+    main()
