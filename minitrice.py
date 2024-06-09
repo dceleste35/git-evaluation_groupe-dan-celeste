@@ -13,8 +13,7 @@ def main():
 
 def calculator(input_str):
 
-    #Fonction qui effectue les calculs
-    return
+    input_str = input_str.replace(' ', '')
 
 if __name__ == "__main__":
     main()
