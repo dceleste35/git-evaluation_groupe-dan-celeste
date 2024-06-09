@@ -1,5 +1,11 @@
 def main():
-    input_str = input("> ")
+
+    while True:
+        try:
+            input_str = input("> ")
+            calculator(input_str)
+        except EOFError:
+            break
 
     calculator(input_str)
 
