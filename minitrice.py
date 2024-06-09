@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def main():
 
     while True:
@@ -6,8 +8,6 @@ def main():
             calculator(input_str)
         except EOFError:
             break
-
-    calculator(input_str)
 
     print("Fin des calculs")
 
