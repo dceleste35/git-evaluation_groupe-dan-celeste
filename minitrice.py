@@ -24,8 +24,12 @@ def calculator(input_str):
         return
 
 
-    left_num = int(left)
-    right_num = int(right)
+    try:
+        left_num = int(left)
+        right_num = int(right)
+    except ValueError:
+        print("Erreur de syntaxe pour le calcul: " + input_str)
+        return
 
     if operator == '+':
         result = left_num + right_num
