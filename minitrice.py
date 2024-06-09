@@ -16,10 +16,23 @@ def calculator(input_str):
     input_str = input_str.replace(' ', '')
 
     for operator in '+-*/':
-        left, right = input_str.split(operator)
+        if operator in input_str:
+            left, right = input_str.split(operator)
+            break
 
-    left_num = float(left)
-    right_num = float(right)
+    left_num = int(left)
+    right_num = int(right)
+
+    if operator == '+':
+        result = left_num + right_num
+    elif operator == '-':
+        result = left_num - right_num
+    elif operator == '*':
+        result = left_num * right_num
+    elif operator == '/':
+        result = left_num / right_num
+
+    print(result)
 
 if __name__ == "__main__":
     main()
