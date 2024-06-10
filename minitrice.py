@@ -13,15 +13,23 @@ def main():
 
 def calculator(input_str):
 
-    input_str = input_str.replace(' ', '')
-
     for operator in '+-*/':
         if operator in input_str:
             left, right = input_str.split(operator)
             break
+    else:
+        print("Erreur de syntaxe pour le calcul: " + input_str)
+        return
 
-    left_num = int(left)
-    right_num = int(right)
+
+    try:
+        left_num = int(left)
+        right_num = int(right)
+    except ValueError:
+        print("Erreur de syntaxe pour le calcul: " + input_str)
+        return
+
+    input_str = input_str.replace(' ', '')
 
     if operator == '+':
         result = left_num + right_num
