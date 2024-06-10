@@ -40,7 +40,10 @@ def calculator(input_str):
     elif operator == '/':
         result = left_num / right_num
 
-    print(result)
+    if isinstance(result, float):
+        print(f"{result:.2f}")
+    else:
+        print(result)
 
 if __name__ == "__main__":
     main()
