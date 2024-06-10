@@ -13,8 +13,6 @@ def main():
 
 def calculator(input_str):
 
-    input_str = input_str.replace(' ', '')
-
     for operator in '+-*/':
         if operator in input_str:
             left, right = input_str.split(operator)
@@ -30,6 +28,8 @@ def calculator(input_str):
     except ValueError:
         print("Erreur de syntaxe pour le calcul: " + input_str)
         return
+
+    input_str = input_str.replace(' ', '')
 
     if operator == '+':
         result = left_num + right_num
