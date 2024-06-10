@@ -23,8 +23,8 @@ def calculator(input_str):
 
 
     try:
-        left_num = int(left)
-        right_num = int(right)
+        left_num = float(left)
+        right_num = float(right)
     except ValueError:
         print("Erreur de syntaxe pour le calcul: " + input_str)
         return
@@ -40,7 +40,10 @@ def calculator(input_str):
     elif operator == '/':
         result = left_num / right_num
 
-    print(result)
+    if result.is_integer():
+        print(int(result))
+    else:
+        print(f"{result:.2f}")
 
 if __name__ == "__main__":
     main()
